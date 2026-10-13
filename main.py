@@ -37,6 +37,10 @@ if "rules" in MCP_TOOLS:
 if "workflow" in MCP_TOOLS:
     from prompts.workflow import workflow
     from tools.workflow import workflow
+    from tools.workflow import readworkflow
+elif "verify_workflow" in MCP_TOOLS:
+    from prompts.workflow import verify_workflow
+    from tools.workflow import readworkflow
 
 if "assistant" in MCP_TOOLS:
     from tools.assistant import assistant
