@@ -33,14 +33,18 @@ if "insights" in MCP_TOOLS:
 if "rules" in MCP_TOOLS:
     from prompts.rule import rule
     from tools.rules import rules
+    from tools.rules import verifyrule
+elif "verify_rule" in MCP_TOOLS:
+    from prompts.rule import rule
+    from tools.rules import verifyrule
 
 if "workflow" in MCP_TOOLS:
     from prompts.workflow import workflow
     from tools.workflow import workflow
-    from tools.workflow import readworkflow
+    from tools.workflow import verifyworkflow
 elif "verify_workflow" in MCP_TOOLS:
     from prompts.workflow import verify_workflow
-    from tools.workflow import readworkflow
+    from tools.workflow import verifyworkflow
 
 if "assistant" in MCP_TOOLS:
     from tools.assistant import assistant
